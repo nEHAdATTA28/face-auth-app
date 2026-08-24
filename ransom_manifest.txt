@@ -1,0 +1,10 @@
+=== RANSOM MANIFEST ===
+1. Encryption Time: 2026-08-23T14:45:46.161848
+2. Encrypted Files: 1 file(s) - /sdcard/Download/pimp.txt
+3. Decryption Instructions: Use XOR key 0xAA (170) and decrypt each file.
+   Contact us for the decryption tool.
+4. Ransom Demand: Pay 1 BTC to address 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+5. System Information:
+OS: android
+Version: CP31.260623.012 dev-keys
+Host: localhost
