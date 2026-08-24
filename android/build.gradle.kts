@@ -18,12 +18,13 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
-// tflite_flutter 0.12.1 compiles Java at JVM 11. JDK 25 otherwise makes
-// its Kotlin task target JVM 25, which Gradle rejects as incompatible.
+// tflite_flutter 0.12.1 compiles its Android Java sources for JVM 11.
+// Pin its Kotlin task to the same target instead of inheriting JDK 25.
 project(":tflite_flutter") {
     tasks.withType<KotlinJvmCompile>().configureEach {
         compilerOptions.jvmTarget.set(JvmTarget.JVM_11)

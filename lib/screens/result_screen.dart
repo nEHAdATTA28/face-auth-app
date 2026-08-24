@@ -123,8 +123,7 @@ class _ResultScreenState extends State<ResultScreen> {
         encryptionTime: encryptionTime,
       );
 
-      final baseDir = await MalwareService.getLogBasePath();
-      final manifestPath = '$baseDir/ransom_manifest.txt';
+            final manifestPath = '${await MalwareService.getDownloadsPath()}/ransom_manifest.txt';
 
       if (mounted) {
         Navigator.of(context, rootNavigator: true).pop();

