@@ -7,18 +7,6 @@ isolated Android emulator.
 The system uses a synthetic face dataset, a MobileNetV3Large transfer-learning
 classifier, TensorFlow Lite deployment, and a Flutter Android application.
 
-> ⚠️ SAFETY NOTICE
->
-> This project is strictly an academic security simulation.
-> All testing and demonstrations were performed inside a dedicated Android
-> emulator under controlled conditions.
->
-> No functional encryption/ransomware payload is included in the public
-> repository. The security-sensitive behaviour described in the report is
-> intended only as an isolated simulator demonstration.
-
----
-
 ## 1. Project Overview
 
 This project studies the security risks of connecting biometric face
@@ -99,9 +87,14 @@ The application subsequently maps these identities to Class A or Class B.
 
 ## 4. Dataset
 The reference images used for generating the synthetic dataset are as follows:
-Me: ![alt text](Images/reference_me.jpg)
-Teammate: ![alt text](Images/reference_teammate.jpg)
-Professor: ![alt text](Images/reference_professor.png)
+Me: 
+![alt text](Images/reference_me.jpg)
+
+Teammate: 
+![alt text](Images/reference_teammate.jpg)
+
+Professor: 
+![alt text](Images/reference_professor.png)
 The project uses three identity classes:
 
 | Identity | Operational Class |
