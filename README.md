@@ -98,7 +98,10 @@ The application subsequently maps these identities to Class A or Class B.
 ---
 
 ## 4. Dataset
-
+The reference images used for generating the synthetic dataset are as follows:
+Me: ![alt text](Images/reference_me.jpg)
+Teammate: ![alt text](Images/reference_teammate.jpg)
+Professor: ![alt text](Images/reference_professor.png)
 The project uses three identity classes:
 
 | Identity | Operational Class |
